@@ -4,120 +4,108 @@ description: APIs Usage
 
 # Documentation
 
-Welcome to the documentation for BaimoRconAPI.
+BaimoRconAPI is a Bukkit plugin that allows Rcon clients to execute server commands and retrieve player and block information using a set of API commands.
 
-This plugin provides several commands for controlling the server, including commands for managing players.
+### Commands
 
-### Player Commands
+#### `/baimoapi player getPos <playerName>`
 
-#### Get Player Position
+Description: Retrieve a player's current coordinates.
 
-```
-/baimoapi player getPos <player-name>
-```
+Example Return: `x=0, y=64, z=0`
 
-Returns the player's current position in block coordinates.
+#### `/baimoapi player getUuid <playerName>`
 
-#### Get Player UUID
+Description: Retrieve a player's unique identifier.
 
-```
-/baimoapi player getUuid <player-name>
-```
+Example Return: `UUID=uuid-here`
 
-Returns the UUID of the specified player.
+#### `/baimoapi player getWorld <playerName>`
 
-#### Get Player World
+Description: Retrieve the world a player is currently in.
 
-```
-/baimoapi player getWorld <player-name>
-```
+Example Return: `World=world_name`
 
-Returns the name of the world that the specified player is currently in.
+#### `/baimoapi player getHealth <playerName>`
 
-#### Get Player Health
+Description: Retrieve a player's health value.
 
-```
-/baimoapi player getHealth <player-name>
-```
+Example Return: `Blood=20.0`
 
-Returns the current health value of the specified player.
+#### `/baimoapi player getHunger <playerName>`
 
-#### Get Player Hunger
+Description: Retrieve a player's hunger value.
 
-```
-/baimoapi player getHunger <player-name>
-```
+Example Return: `Hunger=20`
 
-Returns the current hunger value of the specified player.
+#### `/baimoapi player getExp <playerName>`
 
-#### Get Player Experience
+Description: Retrieve a player's current experience value.
 
-```
-/baimoapi player getExp <player-name>
-```
+Example Return: `Experience=0.5`
 
-Returns the current experience value of the specified player.
+#### `/baimoapi player getExpLevel <playerName>`
 
-#### Get Player Experience Level
+Description: Retrieve a player's current experience level.
 
-```
-/baimoapi player getExpLevel <player-name>
-```
+Example Return: `Experience Level=1`
 
-Returns the current experience level of the specified player.
+#### `/baimoapi player getAllowFlight <playerName>`
 
-#### Get Player Allow Flight
+Description: Retrieve whether a player is allowed to fly or not.
 
-```
-/baimoapi player getAllowFlight <player-name>
-```
+Example Return: `Allow Flight=true`
 
-Returns whether or not the specified player is currently allowed to fly.
+#### `/baimoapi player getSpeed <playerName> <walk/fly>`
 
-#### Get Player Speed
+Description: Retrieve a player's walking or flying speed.
 
-```
-/baimoapi player getSpeed <player-name> [walk | fly]
-```
+Example Return: `Walk Speed=0.2`
 
-Returns the current speed (either walking or flying, depending on the mode specified) of the specified player.
+#### `/baimoapi player setDisplayName <playerName> <displayName>`
 
-#### Set Player Display Name
+Description: Set a player's display name.
 
-```
-/baimoapi player setDisplayName <player-name> <new-display-name>
-```
+Example Return: `msg=Success`
 
-Sets the display name of the specified player.
+#### `/baimoapi player setCompassTarget <playerName> <x> <y> <z>`
 
-#### Set Player Compass Target
+Description: Set a player's compass target.
 
-```
-/baimoapi player setCompassTarget <player-name> <x> <y> <z>
-```
+Example Return: `msg=Success`
 
-Sets the target location for the specified player's compass.
+#### `/baimoapi player getLocale <playerName>`
 
-#### Get Player Locale
+Description: Retrieve a player's current locale.
 
-```
-/baimoapi player getLocale <player-name>
-```
+Example Return: `Locale=en_us`
 
-Returns the locale of the specified player.
+#### `/baimoapi player getClientViewDistance <playerName>`
 
-#### Get Player Client View Distance
+Description: Retrieve a player's client view distance.
 
-```
-/baimoapi player getClientViewDistance <player-name>
-```
+Example Return: `Client View Distance=10`
 
-Returns the client view distance of the specified player.
+#### `/baimoapi player getBedSpawnLocation <playerName>`
 
-#### Get Player Bed Spawn Location
+Description: Retrieve a player's current bed spawn location.
 
-```
-/baimoapi player getBedSpawnLocation <player-name>
-```
+Example Return: `Bed Spawn Location=world_name, 0, 64, 0`
 
-Returns the location of the bed where the specified player will respawn, or "none" if they have not set a bed spawn location.
+#### `/baimoapi block getID <x> <y> <z>`
+
+Description: Retrieve the ID of a block at a certain location.
+
+Example Return: `BlockID=dirt`
+
+#### `/baimoapi block getFace <x> <y> <z>`
+
+Description: Retrieve the face of a block at a certain location.
+
+Example Return: `BlockFace=north`
+
+#### `/baimoapi block searchForBlock <x1> <y1> <z1> <x2> <y2> <z2> <blockId>`
+
+Description: Search for a specific type of block within a defined area.
+
+Example Return: `Block={x=0, y=64, z=0}`
