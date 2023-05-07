@@ -4,7 +4,9 @@ description: APIs Usage
 
 # Documentation
 
-BaimoRconAPI is a Bukkit plugin that allows Rcon clients to execute server commands and retrieve player and block information using a set of API commands.
+Welcome to the documentation for BaimoRconAPI.
+
+This plugin provides several commands for controlling the server, including commands for managing players.
 
 ### Commands
 
